@@ -18,8 +18,9 @@ class poseDetector():
     def findPerson(self, img, draw=False):
 
         # this img is in BGR therefore...we convert it into RGB
-        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        self.results = self.pose.process(imgRGB)
+        # imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        # self.results = self.pose.process(imgRGB)
+        self.results = self.pose.process(img)
         # print(self.results.pose_landmarks)
 
         if self.results.pose_landmarks:      # landmarks are there AND
